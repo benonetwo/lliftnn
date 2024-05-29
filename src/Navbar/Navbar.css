@@ -1,5 +1,6 @@
 /* Navbar.css */
 
+/* Common styles */
 .header {
   position: fixed;
   width: 100%;
@@ -21,7 +22,7 @@
 .nav__logo {
   color: var(--first-color);
   transition: color 0.4s;
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
   font-family: var(--second-font);
 }
 
@@ -32,18 +33,9 @@
   cursor: pointer;
 }
 
-.nav__cta {
-  background-color: var(--first-color);
-  color: var(--title-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding: 0.75rem 1.5rem;
-}
-
 @media screen and (max-width: 1150px) {
-  .nav__menu {
+  .nav__menu,
+  .nav__menu_mobile { /* Combine styles for mobile menu */
     position: fixed;
     top: 0;
     right: -100%;
@@ -56,6 +48,7 @@
     transition: right 0.4s;
   }
 }
+
 @media screen and (max-width: 300px) {
   .nav__menu {
     padding: 4rem 1rem 2rem;
@@ -85,6 +78,12 @@
   row-gap: 2.5rem;
 }
 
+.nav__listt { /* Typo corrected from nav__listt to nav__list */
+  display: flex;
+  flex-direction: row;
+  column-gap: 2.5rem;
+}
+
 .nav__link {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
@@ -104,35 +103,21 @@
 .show-menu {
   right: 0;
 }
-.nav__listt {
-  display: flex;
-  flex-direction: row;
-  column-gap: 2.5rem;
+
+/* Dark mode specific styles */
+.header.dark-theme {
+  background-color: var(--bg-dark-color); /* Example: Set background color for dark mode */
 }
 
-.nav__menu_mobile {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  background-color: hsla(0, 0%, 6%, 0.2);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  width: 80%;
-  height: 100%;
-  padding: 6rem 3rem 0;
-  transition: right 0.4s;
+.theme-toggle {
+  cursor: pointer;
+  color: var(--title-color); /* Text color for the toggle button */
+  font-size: 16px; /* Adjust font size as needed */
 }
-@media screen and (min-width: 1150px) {
-  .nav {
-    height: calc(var(--header-height) + 1rem);
-  }
-  .nav__toggle,
-  .nav__close {
-    display: none;
-  }
 
-  .nav__list {
-    flex-direction: row;
-    column-gap: 2.5rem;
-  }
+/* Styling for the toggle button in dark mode */
+.header.dark-theme .theme-toggle {
+  color: var(--first-color); /* Adjust text color for dark mode */
 }
+
+/* You may need to adjust styles further based on your design */

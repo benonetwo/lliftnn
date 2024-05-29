@@ -50,29 +50,11 @@ const NavbarHook = () => {
         </li>
         <li>
           <NavLink
-            to="/favorite"
-            className={linkClassName}
-            onClick={closeMobileMenu}
-          >
-            Favorite
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/location"
-            className={linkClassName}
-            onClick={closeMobileMenu}
-          >
-            Location
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
             to="/get-started"
             className={`${linkClassName} ${buttonClassName}`}
             onClick={closeMobileMenu}
           >
-            Get Started
+           Join us
           </NavLink>
         </li>
       </ul>
@@ -83,7 +65,7 @@ const NavbarHook = () => {
     <header className="header">
       <nav className="nav container">
         <NavLink to="/" className="nav__logo">
-          Navigation Bar
+          Lliftn
         </NavLink>
 
         {isMobile && (

@@ -18,8 +18,8 @@ const Navbar = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <NavLink to="/" className="nav__logo">
-          Navigation Bar
+        /<NavLink to="/" className="nav__logo">
+          Llift 
         </NavLink>
 
         <div
@@ -51,28 +51,11 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav__item">
-              <NavLink
-                to="/favorite"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                Favorite
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink
-                to="/location"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                Location
-              </NavLink>
-            </li>
-            <li className="nav__item">
               <NavLink to="/get-started" className="nav__link nav__cta">
-                Get Started
+                Join us
               </NavLink>
             </li>
+            
           </ul>
           <div className="nav__close" id="nav-close" onClick={toggleMenu}>
             <IoClose />
